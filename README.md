@@ -71,6 +71,11 @@ mindset: Curious by default, driven by clean and useful solutions.
 ![Arduino](https://img.shields.io/badge/Arduino-00878F?style=for-the-badge&logo=arduino&logoColor=white)
 ![AutoHotkey](https://img.shields.io/badge/AutoHotkey-334455?style=for-the-badge&logo=autohotkey&logoColor=white)
 <br/>
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+<br/>
 ![Nix](https://img.shields.io/badge/Nix-5277C3?style=for-the-badge&logo=nixos&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
@@ -86,7 +91,7 @@ mindset: Curious by default, driven by clean and useful solutions.
 <div align="center">
 
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=kxdrsrt&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub stats"/>
-<img height="165" src="https://github-readme-streak-stats.demolab.com?user=kxdrsrt&theme=tokyonight&hide_border=true" alt="GitHub streak"/>
+<img height="165" src="https://streak-stats.demolab.com?user=kxdrsrt&theme=tokyonight&hide_border=true" alt="GitHub streak"/>
 
 <br/>
 
