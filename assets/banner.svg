@@ -15,28 +15,58 @@
   </defs>
 
   <rect x="0" y="0" width="1200" height="220" rx="20" fill="url(#bg)"/>
-  <rect x="0" y="0" width="8" height="220" rx="4" fill="url(#accent)"/>
 
-  <!-- circuit motif -->
+  <rect x="0" y="0" width="8" height="220" rx="4" fill="url(#accent)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
   <g stroke="url(#line)" stroke-width="2" fill="none" opacity="0.55">
-    <path d="M980 60 h70 v40 h60"/>
-    <path d="M980 160 h110 v-30 h20"/>
-    <path d="M1040 110 h70"/>
+    <path d="M980 60 h70 v40 h60" stroke-dasharray="10 8">
+      <animate attributeName="stroke-dashoffset" values="0;-72" dur="2.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M980 160 h110 v-30 h20" stroke-dasharray="10 8">
+      <animate attributeName="stroke-dashoffset" values="0;-72" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1040 110 h70" stroke-dasharray="10 8">
+      <animate attributeName="stroke-dashoffset" values="0;-72" dur="1.8s" repeatCount="indefinite"/>
+    </path>
   </g>
+
   <g fill="#00C2A8">
-    <circle cx="980" cy="60" r="5"/>
-    <circle cx="1110" cy="100" r="5"/>
-    <circle cx="980" cy="160" r="5"/>
-    <circle cx="1110" cy="110" r="5"/>
-    <circle cx="1040" cy="110" r="5"/>
+    <circle cx="980" cy="60" r="5">
+      <animate attributeName="r" values="4;6;4" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1110" cy="100" r="5">
+      <animate attributeName="r" values="4;6;4" dur="2.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="160" r="5">
+      <animate attributeName="r" values="4;6;4" dur="2.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1110" cy="110" r="5">
+      <animate attributeName="r" values="4;6;4" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1040" cy="110" r="5">
+      <animate attributeName="r" values="4;6;4" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
   </g>
   <g fill="#0098FF" opacity="0.85">
-    <circle cx="1050" cy="60" r="5"/>
-    <circle cx="1090" cy="130" r="5"/>
+    <circle cx="1050" cy="60" r="5">
+      <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1090" cy="130" r="5">
+      <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.3s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
-  <text x="48" y="108" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="62" font-weight="700" fill="#F4F8FB">Kadir Sert</text>
-  <text x="50" y="152" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="400" fill="#8BA6BC">Software Engineer at Siemens AG</text>
-  <rect x="50" y="170" width="150" height="4" rx="2" fill="url(#line)"/>
-  <text x="214" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#5E7E88">Erlangen, Germany</text>
+  <text x="48" y="108" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="62" font-weight="700" fill="#F4F8FB">Kadir Sert<animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/></text>
+  <text x="50" y="152" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="400" fill="#8BA6BC">Software Engineer at Siemens AG<animate attributeName="opacity" values="0;1" dur="1.2s" begin="0.3s" fill="freeze"/></text>
+
+  <rect x="50" y="170" width="150" height="4" rx="2" fill="url(#line)">
+    <animate attributeName="width" values="0;150" dur="1s" begin="0.6s" fill="freeze"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.6s" repeatCount="indefinite"/>
+  </rect>
+  <text x="214" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#5E7E88">Erlangen, Germany<animate attributeName="opacity" values="0;1" dur="1.2s" begin="0.6s" fill="freeze"/></text>
 </svg>

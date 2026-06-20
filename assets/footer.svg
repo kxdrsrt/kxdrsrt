@@ -15,31 +15,58 @@
   </defs>
 
   <rect x="0" y="0" width="1200" height="90" rx="16" fill="url(#fbg)"/>
-  <rect x="0" y="0" width="8" height="90" rx="4" fill="url(#faccent)"/>
 
-  <!-- left circuit motif -->
+  <rect x="0" y="0" width="8" height="90" rx="4" fill="url(#faccent)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
   <g stroke="url(#fline)" stroke-width="2" fill="none" opacity="0.5">
-    <path d="M60 30 h60 v30 h40"/>
-    <path d="M60 62 h90"/>
+    <path d="M60 30 h60 v30 h40" stroke-dasharray="9 7">
+      <animate attributeName="stroke-dashoffset" values="0;-64" dur="2.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M60 62 h90" stroke-dasharray="9 7">
+      <animate attributeName="stroke-dashoffset" values="0;-64" dur="2.6s" repeatCount="indefinite"/>
+    </path>
   </g>
   <g fill="#00C2A8">
-    <circle cx="60" cy="30" r="4.5"/>
-    <circle cx="120" cy="60" r="4.5"/>
-    <circle cx="150" cy="62" r="4.5"/>
+    <circle cx="60" cy="30" r="4.5">
+      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="60" r="4.5">
+      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="62" r="4.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
   </g>
-  <circle cx="120" cy="30" r="4.5" fill="#0098FF"/>
+  <circle cx="120" cy="30" r="4.5" fill="#0098FF">
+    <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.7s" repeatCount="indefinite"/>
+  </circle>
 
-  <!-- right circuit motif (mirrored) -->
   <g stroke="url(#fline)" stroke-width="2" fill="none" opacity="0.5">
-    <path d="M1140 30 h-60 v30 h-40"/>
-    <path d="M1140 62 h-90"/>
+    <path d="M1140 30 h-60 v30 h-40" stroke-dasharray="9 7">
+      <animate attributeName="stroke-dashoffset" values="0;64" dur="2.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1140 62 h-90" stroke-dasharray="9 7">
+      <animate attributeName="stroke-dashoffset" values="0;64" dur="2.6s" repeatCount="indefinite"/>
+    </path>
   </g>
   <g fill="#00C2A8">
-    <circle cx="1140" cy="30" r="4.5"/>
-    <circle cx="1080" cy="60" r="4.5"/>
-    <circle cx="1050" cy="62" r="4.5"/>
+    <circle cx="1140" cy="30" r="4.5">
+      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1080" cy="60" r="4.5">
+      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1050" cy="62" r="4.5">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
   </g>
-  <circle cx="1080" cy="30" r="4.5" fill="#0098FF"/>
+  <circle cx="1080" cy="30" r="4.5" fill="#0098FF">
+    <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.7s" repeatCount="indefinite"/>
+  </circle>
 
   <text x="600" y="46" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#F4F8FB">Thanks for stopping by</text>
   <text x="600" y="70" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#8BA6BC">Built in Erlangen, Germany</text>
