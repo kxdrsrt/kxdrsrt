@@ -1,8 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-label="Kadir Sert - Software Engineer at Siemens AG">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0B1A2B"/>
-      <stop offset="1" stop-color="#0E2A2A"/>
+      <stop offset="0" stop-color="#0B1A2B">
+        <animate attributeName="stop-color" values="#0B1A2B;#0A2233;#0E2A2A;#0B1A2B" dur="9s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#0E2A2A">
+        <animate attributeName="stop-color" values="#0E2A2A;#0B2533;#0B1A2B;#0E2A2A" dur="9s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0098FF"/>
@@ -12,61 +16,87 @@
       <stop offset="0" stop-color="#0098FF"/>
       <stop offset="1" stop-color="#00C2A8"/>
     </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.5" stop-color="#9FE9FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+      <animate attributeName="x1" values="-1;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <clipPath id="clip"><rect x="0" y="0" width="1200" height="220" rx="20"/></clipPath>
   </defs>
 
-  <rect x="0" y="0" width="1200" height="220" rx="20" fill="url(#bg)"/>
+  <g clip-path="url(#clip)">
+    <rect x="0" y="0" width="1200" height="220" fill="url(#bg)"/>
 
-  <rect x="0" y="0" width="8" height="220" rx="4" fill="url(#accent)">
-    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
-  </rect>
+    <!-- drifting twinkling particles -->
+    <g fill="#3FD0C0">
+      <circle cx="240" cy="60" r="2.2"><animate attributeName="opacity" values="0;1;0" dur="3.4s" repeatCount="indefinite"/><animate attributeName="cy" values="80;40" dur="3.4s" repeatCount="indefinite"/></circle>
+      <circle cx="360" cy="150" r="2.6"><animate attributeName="opacity" values="0;1;0" dur="4.1s" repeatCount="indefinite"/><animate attributeName="cy" values="170;110" dur="4.1s" repeatCount="indefinite"/></circle>
+      <circle cx="520" cy="40" r="2"><animate attributeName="opacity" values="0;1;0" dur="3.8s" repeatCount="indefinite"/><animate attributeName="cy" values="70;20" dur="3.8s" repeatCount="indefinite"/></circle>
+      <circle cx="640" cy="180" r="2.4"><animate attributeName="opacity" values="0;1;0" dur="4.6s" repeatCount="indefinite"/><animate attributeName="cy" values="200;140" dur="4.6s" repeatCount="indefinite"/></circle>
+      <circle cx="760" cy="70" r="2.2"><animate attributeName="opacity" values="0;1;0" dur="3.2s" repeatCount="indefinite"/><animate attributeName="cy" values="95;45" dur="3.2s" repeatCount="indefinite"/></circle>
+      <circle cx="300" cy="110" r="1.8"><animate attributeName="opacity" values="0;0.9;0" dur="2.8s" repeatCount="indefinite"/></circle>
+      <circle cx="700" cy="130" r="1.8"><animate attributeName="opacity" values="0;0.9;0" dur="5s" repeatCount="indefinite"/></circle>
+    </g>
+    <g fill="#69B7FF">
+      <circle cx="430" cy="90" r="2"><animate attributeName="opacity" values="0;1;0" dur="4.3s" repeatCount="indefinite"/><animate attributeName="cy" values="115;65" dur="4.3s" repeatCount="indefinite"/></circle>
+      <circle cx="580" cy="160" r="2.3"><animate attributeName="opacity" values="0;1;0" dur="3.6s" repeatCount="indefinite"/><animate attributeName="cy" values="185;125" dur="3.6s" repeatCount="indefinite"/></circle>
+      <circle cx="820" cy="120" r="2"><animate attributeName="opacity" values="0;1;0" dur="4.9s" repeatCount="indefinite"/><animate attributeName="cy" values="145;95" dur="4.9s" repeatCount="indefinite"/></circle>
+    </g>
 
-  <g stroke="url(#line)" stroke-width="2" fill="none" opacity="0.55">
-    <path d="M980 60 h70 v40 h60" stroke-dasharray="10 8">
-      <animate attributeName="stroke-dashoffset" values="0;-72" dur="2.2s" repeatCount="indefinite"/>
-    </path>
-    <path d="M980 160 h110 v-30 h20" stroke-dasharray="10 8">
-      <animate attributeName="stroke-dashoffset" values="0;-72" dur="2.6s" repeatCount="indefinite"/>
-    </path>
-    <path d="M1040 110 h70" stroke-dasharray="10 8">
-      <animate attributeName="stroke-dashoffset" values="0;-72" dur="1.8s" repeatCount="indefinite"/>
-    </path>
+    <!-- circuit motif with flowing energy -->
+    <g stroke="url(#line)" stroke-width="2" fill="none" opacity="0.6">
+      <path d="M940 50 h110 v40 h70" stroke-dasharray="10 8"><animate attributeName="stroke-dashoffset" values="0;-72" dur="1.9s" repeatCount="indefinite"/></path>
+      <path d="M940 170 h130 v-34 h40" stroke-dasharray="10 8"><animate attributeName="stroke-dashoffset" values="0;-72" dur="2.5s" repeatCount="indefinite"/></path>
+      <path d="M1000 110 h120" stroke-dasharray="10 8"><animate attributeName="stroke-dashoffset" values="0;-72" dur="1.6s" repeatCount="indefinite"/></path>
+      <path d="M70 196 h220" stroke-dasharray="8 10" opacity="0.5"><animate attributeName="stroke-dashoffset" values="0;-90" dur="3s" repeatCount="indefinite"/></path>
+    </g>
+
+    <!-- radar ping rings -->
+    <g fill="none" stroke="#00C2A8" stroke-width="2">
+      <circle cx="980" cy="50" r="5"><animate attributeName="r" values="5;26" dur="2.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="2.6s" repeatCount="indefinite"/></circle>
+      <circle cx="1120" cy="110" r="5"><animate attributeName="r" values="5;26" dur="3.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0" dur="3.1s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- pulsing nodes -->
+    <g fill="#00C2A8">
+      <circle cx="980" cy="50" r="5"><animate attributeName="r" values="4;6.5;4" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="1120" cy="90" r="5"><animate attributeName="r" values="4;6.5;4" dur="2.9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;1;0.6" dur="2.9s" repeatCount="indefinite"/></circle>
+      <circle cx="940" cy="170" r="5"><animate attributeName="r" values="4;6.5;4" dur="2.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;1;0.6" dur="2.1s" repeatCount="indefinite"/></circle>
+      <circle cx="1120" cy="110" r="5"><animate attributeName="r" values="4;6.5;4" dur="3.2s" repeatCount="indefinite"/></circle>
+      <circle cx="1000" cy="110" r="5"><animate attributeName="r" values="4;6.5;4" dur="2.6s" repeatCount="indefinite"/></circle>
+    </g>
+    <g fill="#0098FF" opacity="0.9">
+      <circle cx="1050" cy="50" r="5"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.7s" repeatCount="indefinite"/></circle>
+      <circle cx="1110" cy="136" r="5"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.3s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- moving light sweep -->
+    <rect x="-360" y="0" width="300" height="220" fill="url(#sheen)"><animate attributeName="x" values="-360;1200" dur="4.5s" repeatCount="indefinite"/></rect>
   </g>
 
-  <g fill="#00C2A8">
-    <circle cx="980" cy="60" r="5">
-      <animate attributeName="r" values="4;6;4" dur="2.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1110" cy="100" r="5">
-      <animate attributeName="r" values="4;6;4" dur="2.9s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.9s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="980" cy="160" r="5">
-      <animate attributeName="r" values="4;6;4" dur="2.1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.1s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1110" cy="110" r="5">
-      <animate attributeName="r" values="4;6;4" dur="3.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1040" cy="110" r="5">
-      <animate attributeName="r" values="4;6;4" dur="2.6s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-  <g fill="#0098FF" opacity="0.85">
-    <circle cx="1050" cy="60" r="5">
-      <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.7s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1090" cy="130" r="5">
-      <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.3s" repeatCount="indefinite"/>
-    </circle>
-  </g>
+  <!-- animated accent bar -->
+  <rect x="0" y="0" width="8" height="220" rx="4" fill="url(#accent)"><animate attributeName="opacity" values="0.65;1;0.65" dur="2.4s" repeatCount="indefinite"/></rect>
 
-  <text x="48" y="108" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="62" font-weight="700" fill="#F4F8FB">Kadir Sert<animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/></text>
+  <!-- animated dashed border -->
+  <rect x="2" y="2" width="1196" height="216" rx="19" fill="none" stroke="url(#line)" stroke-width="2" stroke-dasharray="16 12" opacity="0.35"><animate attributeName="stroke-dashoffset" values="0;-560" dur="14s" repeatCount="indefinite"/></rect>
+
+  <!-- name (gradient sweep + gentle float) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="4s" repeatCount="indefinite" additive="sum"/>
+    <text x="48" y="108" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="62" font-weight="700" fill="url(#name)">Kadir Sert<animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/></text>
+  </g>
   <text x="50" y="152" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="400" fill="#8BA6BC">Software Engineer at Siemens AG<animate attributeName="opacity" values="0;1" dur="1.2s" begin="0.3s" fill="freeze"/></text>
 
   <rect x="50" y="170" width="150" height="4" rx="2" fill="url(#line)">
     <animate attributeName="width" values="0;150" dur="1s" begin="0.6s" fill="freeze"/>
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" begin="1.6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.6s" begin="1.6s" repeatCount="indefinite"/>
   </rect>
   <text x="214" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#5E7E88">Erlangen, Germany<animate attributeName="opacity" values="0;1" dur="1.2s" begin="0.6s" fill="freeze"/></text>
 </svg>

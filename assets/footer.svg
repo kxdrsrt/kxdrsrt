@@ -1,8 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="90" viewBox="0 0 1200 90" role="img" aria-label="Thanks for stopping by">
   <defs>
     <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0B1A2B"/>
-      <stop offset="1" stop-color="#0E2A2A"/>
+      <stop offset="0" stop-color="#0B1A2B">
+        <animate attributeName="stop-color" values="#0B1A2B;#0A2233;#0E2A2A;#0B1A2B" dur="9s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#0E2A2A">
+        <animate attributeName="stop-color" values="#0E2A2A;#0B2533;#0B1A2B;#0E2A2A" dur="9s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
     <linearGradient id="faccent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0098FF"/>
@@ -12,61 +16,75 @@
       <stop offset="0" stop-color="#0098FF"/>
       <stop offset="1" stop-color="#00C2A8"/>
     </linearGradient>
+    <linearGradient id="fsheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ftext" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.5" stop-color="#9FE9FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+      <animate attributeName="x1" values="-1;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <clipPath id="fclip"><rect x="0" y="0" width="1200" height="90" rx="16"/></clipPath>
   </defs>
 
-  <rect x="0" y="0" width="1200" height="90" rx="16" fill="url(#fbg)"/>
+  <g clip-path="url(#fclip)">
+    <rect x="0" y="0" width="1200" height="90" fill="url(#fbg)"/>
 
-  <rect x="0" y="0" width="8" height="90" rx="4" fill="url(#faccent)">
-    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
-  </rect>
+    <!-- twinkling particles -->
+    <g fill="#3FD0C0">
+      <circle cx="320" cy="30" r="2"><animate attributeName="opacity" values="0;1;0" dur="3.2s" repeatCount="indefinite"/><animate attributeName="cy" values="45;20" dur="3.2s" repeatCount="indefinite"/></circle>
+      <circle cx="430" cy="60" r="1.8"><animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="770" cy="32" r="2.1"><animate attributeName="opacity" values="0;1;0" dur="3.6s" repeatCount="indefinite"/><animate attributeName="cy" values="50;22" dur="3.6s" repeatCount="indefinite"/></circle>
+      <circle cx="880" cy="62" r="1.8"><animate attributeName="opacity" values="0;0.9;0" dur="4.6s" repeatCount="indefinite"/></circle>
+    </g>
+    <g fill="#69B7FF">
+      <circle cx="500" cy="28" r="1.9"><animate attributeName="opacity" values="0;1;0" dur="4.3s" repeatCount="indefinite"/><animate attributeName="cy" values="44;20" dur="4.3s" repeatCount="indefinite"/></circle>
+      <circle cx="700" cy="64" r="2"><animate attributeName="opacity" values="0;1;0" dur="3.8s" repeatCount="indefinite"/></circle>
+    </g>
 
-  <g stroke="url(#fline)" stroke-width="2" fill="none" opacity="0.5">
-    <path d="M60 30 h60 v30 h40" stroke-dasharray="9 7">
-      <animate attributeName="stroke-dashoffset" values="0;-64" dur="2.2s" repeatCount="indefinite"/>
-    </path>
-    <path d="M60 62 h90" stroke-dasharray="9 7">
-      <animate attributeName="stroke-dashoffset" values="0;-64" dur="2.6s" repeatCount="indefinite"/>
-    </path>
-  </g>
-  <g fill="#00C2A8">
-    <circle cx="60" cy="30" r="4.5">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="120" cy="60" r="4.5">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.9s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="150" cy="62" r="4.5">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-  <circle cx="120" cy="30" r="4.5" fill="#0098FF">
-    <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.7s" repeatCount="indefinite"/>
-  </circle>
+    <!-- left circuit motif -->
+    <g stroke="url(#fline)" stroke-width="2" fill="none" opacity="0.55">
+      <path d="M60 30 h60 v30 h40" stroke-dasharray="9 7"><animate attributeName="stroke-dashoffset" values="0;-64" dur="2s" repeatCount="indefinite"/></path>
+      <path d="M60 62 h90" stroke-dasharray="9 7"><animate attributeName="stroke-dashoffset" values="0;-64" dur="2.6s" repeatCount="indefinite"/></path>
+    </g>
+    <g fill="none" stroke="#00C2A8" stroke-width="2">
+      <circle cx="60" cy="30" r="4.5"><animate attributeName="r" values="4.5;18" dur="2.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="2.8s" repeatCount="indefinite"/></circle>
+    </g>
+    <g fill="#00C2A8">
+      <circle cx="60" cy="30" r="4.5"><animate attributeName="r" values="3.5;5.8;3.5" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="120" cy="60" r="4.5"><animate attributeName="r" values="3.5;5.8;3.5" dur="2.9s" repeatCount="indefinite"/></circle>
+      <circle cx="150" cy="62" r="4.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/></circle>
+    </g>
+    <circle cx="120" cy="30" r="4.5" fill="#0098FF"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.7s" repeatCount="indefinite"/></circle>
 
-  <g stroke="url(#fline)" stroke-width="2" fill="none" opacity="0.5">
-    <path d="M1140 30 h-60 v30 h-40" stroke-dasharray="9 7">
-      <animate attributeName="stroke-dashoffset" values="0;64" dur="2.2s" repeatCount="indefinite"/>
-    </path>
-    <path d="M1140 62 h-90" stroke-dasharray="9 7">
-      <animate attributeName="stroke-dashoffset" values="0;64" dur="2.6s" repeatCount="indefinite"/>
-    </path>
-  </g>
-  <g fill="#00C2A8">
-    <circle cx="1140" cy="30" r="4.5">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1080" cy="60" r="4.5">
-      <animate attributeName="r" values="3.5;5.5;3.5" dur="2.9s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1050" cy="62" r="4.5">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-  <circle cx="1080" cy="30" r="4.5" fill="#0098FF">
-    <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.7s" repeatCount="indefinite"/>
-  </circle>
+    <!-- right circuit motif -->
+    <g stroke="url(#fline)" stroke-width="2" fill="none" opacity="0.55">
+      <path d="M1140 30 h-60 v30 h-40" stroke-dasharray="9 7"><animate attributeName="stroke-dashoffset" values="0;64" dur="2s" repeatCount="indefinite"/></path>
+      <path d="M1140 62 h-90" stroke-dasharray="9 7"><animate attributeName="stroke-dashoffset" values="0;64" dur="2.6s" repeatCount="indefinite"/></path>
+    </g>
+    <g fill="none" stroke="#00C2A8" stroke-width="2">
+      <circle cx="1140" cy="30" r="4.5"><animate attributeName="r" values="4.5;18" dur="3.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0" dur="3.1s" repeatCount="indefinite"/></circle>
+    </g>
+    <g fill="#00C2A8">
+      <circle cx="1140" cy="30" r="4.5"><animate attributeName="r" values="3.5;5.8;3.5" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;1;0.6" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="1080" cy="60" r="4.5"><animate attributeName="r" values="3.5;5.8;3.5" dur="2.9s" repeatCount="indefinite"/></circle>
+      <circle cx="1050" cy="62" r="4.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.1s" repeatCount="indefinite"/></circle>
+    </g>
+    <circle cx="1080" cy="30" r="4.5" fill="#0098FF"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.7s" repeatCount="indefinite"/></circle>
 
-  <text x="600" y="54" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#F4F8FB">Thanks for stopping by</text>
+    <!-- moving light sweep -->
+    <rect x="-260" y="0" width="220" height="90" fill="url(#fsheen)"><animate attributeName="x" values="-260;1200" dur="4.5s" repeatCount="indefinite"/></rect>
+  </g>
+
+  <rect x="0" y="0" width="8" height="90" rx="4" fill="url(#faccent)"><animate attributeName="opacity" values="0.65;1;0.65" dur="2.4s" repeatCount="indefinite"/></rect>
+  <rect x="2" y="2" width="1196" height="86" rx="15" fill="none" stroke="url(#fline)" stroke-width="2" stroke-dasharray="16 12" opacity="0.35"><animate attributeName="stroke-dashoffset" values="0;-420" dur="12s" repeatCount="indefinite"/></rect>
+
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="4s" repeatCount="indefinite" additive="sum"/>
+    <text x="600" y="54" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="url(#ftext)">Thanks for stopping by</text>
+  </g>
 </svg>
