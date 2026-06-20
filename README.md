@@ -90,6 +90,14 @@ of just chat.
 
 <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kxdrsrt&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top languages"/>
 
+<br/><br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/contributions-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="./assets/contributions.svg"/>
+  <img src="./assets/contributions.svg" width="100%" alt="Contribution snake"/>
+</picture>
+
 </div>
 
 <!-- ======================= CONTACT ======================= -->
