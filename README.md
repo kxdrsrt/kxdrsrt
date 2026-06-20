@@ -97,3 +97,12 @@ of just chat.
 
 Happy to talk shop. Reach me on
 <a href="https://www.linkedin.com/in/kadir-sert/">LinkedIn</a>.
+
+<!-- ======================= FOOTER ======================= -->
+<div align="center">
+
+<br/>
+
+<img src="./assets/footer.svg" width="100%" alt="Thanks for stopping by"/>
+
+</div>
