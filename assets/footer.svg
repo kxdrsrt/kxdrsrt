@@ -68,6 +68,5 @@
     <animate attributeName="opacity" values="0.4;0.95;0.4" dur="2.7s" repeatCount="indefinite"/>
   </circle>
 
-  <text x="600" y="46" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#F4F8FB">Thanks for stopping by</text>
-  <text x="600" y="70" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#8BA6BC">Built in Erlangen, Germany</text>
+  <text x="600" y="54" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#F4F8FB">Thanks for stopping by</text>
 </svg>
