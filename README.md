@@ -6,12 +6,14 @@
 <br/><br/>
 
 <a href="https://www.linkedin.com/in/kadir-sert/">
-  <img src="https://img.shields.io/badge/LinkedIn-kadir--sert-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
+&nbsp;
 <a href="https://github.com/kxdrsrt">
-  <img src="https://img.shields.io/badge/GitHub-kxdrsrt-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
 </a>
-<img src="https://komarev.com/ghpvc/?username=kxdrsrt&style=flat-square&color=00C2A8&label=profile+views" alt="Profile views"/>
+&nbsp;
+<img src="https://komarev.com/ghpvc/?username=kxdrsrt&style=for-the-badge&color=00C2A8&label=Views" alt="Profile views"/>
 
 </div>
 
