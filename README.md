@@ -1,43 +1,38 @@
 <!-- ======================= HEADER ======================= -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0098FF,100:00C2A8&height=200&section=header&text=Kadir%20Sert&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Software%20Engineer%20%40%20Siemens%20AG&descAlignY=58&descSize=20" width="100%" alt="header"/>
+<img src="./assets/banner.svg" width="100%" alt="Kadir Sert — Software Engineer at Siemens AG"/>
+
+<br/><br/>
 
 <a href="https://www.linkedin.com/in/kadir-sert/">
-  <img src="https://img.shields.io/badge/LinkedIn-kadir--sert-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  <img src="https://img.shields.io/badge/LinkedIn-kadir--sert-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 <a href="https://github.com/kxdrsrt">
-  <img src="https://img.shields.io/badge/GitHub-kxdrsrt-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/GitHub-kxdrsrt-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
 </a>
-<img src="https://komarev.com/ghpvc/?username=kxdrsrt&style=for-the-badge&color=00C2A8&label=PROFILE+VIEWS" alt="Profile views"/>
-
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3500&pause=900&color=0098FF&center=true&vCenter=true&width=620&lines=Software+Development+%26+Automation;Building+with+Claude+%26+MCP;Agentic+workflows+%26+AI+tooling;Always+learning%2C+always+building." alt="typing animation"/>
+<img src="https://komarev.com/ghpvc/?username=kxdrsrt&style=flat-square&color=00C2A8&label=profile+views" alt="Profile views"/>
 
 </div>
 
 <!-- ======================= ABOUT ======================= -->
+<h2><img src="./assets/icons/about.svg" height="24" align="top"/>&nbsp; About</h2>
 
-## 👋 About Me
+I am Kadir, a software engineer at Siemens AG based in Erlangen, Germany. I studied
+Mechatronics and Precision Engineering at Nuremberg University of Applied Sciences and
+finished my B.Eng. in 2024.
 
-```yaml
-name: Kadir Sert
-role: Software Engineer @ Siemens AG
-location: Erlangen, Germany 🇩🇪
-education: B.Eng. Mechatronics / Precision Engineering
-  Nuremberg University of Applied Sciences (2024)
-focus: AI tooling · Agentic workflows · Software development · Automation
-mindset: Curious by default, driven by clean and useful solutions.
-```
+Most of my work sits where software meets the physical world: automation, tooling, and
+the systems that tie them together. Lately a lot of that revolves around building with
+LLMs and the Model Context Protocol, giving models real access to tools and data instead
+of just chat.
 
-- 🔭 Building AI-powered tools and automation with Claude, MCP servers, and agentic workflows.
-- 🌱 Deepening my skills across software engineering, embedded systems, and applied AI.
-- ⚡ Born and raised in Erlangen, with a constant appetite for learning new tech.
+- Currently building automation and developer tooling around Claude and MCP.
+- Comfortable across software, embedded systems, and data work.
+- Always poking at something new to see how it ticks.
 
 <!-- ======================= AI STACK ======================= -->
-
-## 🤖 AI & Agentic Tooling
+<h2><img src="./assets/icons/ai.svg" height="24" align="top"/>&nbsp; AI &amp; Agents</h2>
 
 <div align="center">
 
@@ -56,11 +51,8 @@ mindset: Curious by default, driven by clean and useful solutions.
 
 </div>
 
-> Building with **Claude** and the **Model Context Protocol** - wiring LLMs to real tools, data, and automation through custom MCP servers and agentic workflows.
-
 <!-- ======================= TECH STACK ======================= -->
-
-## 🧠 Languages & Tools
+<h2><img src="./assets/icons/stack.svg" height="24" align="top"/>&nbsp; Languages &amp; Tools</h2>
 
 <div align="center">
 
@@ -85,8 +77,7 @@ mindset: Curious by default, driven by clean and useful solutions.
 </div>
 
 <!-- ======================= STATS ======================= -->
-
-## 📊 GitHub Stats
+<h2><img src="./assets/icons/stats.svg" height="24" align="top"/>&nbsp; Activity</h2>
 
 <div align="center">
 
@@ -100,20 +91,7 @@ mindset: Curious by default, driven by clean and useful solutions.
 </div>
 
 <!-- ======================= CONTACT ======================= -->
+<h2><img src="./assets/icons/contact.svg" height="24" align="top"/>&nbsp; Contact</h2>
 
-## 📫 Get in Touch
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/kadir-sert/">
-  <img src="https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-</a>
-
-</div>
-
-<!-- ======================= FOOTER ======================= -->
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C2A8,100:0098FF&height=120&section=footer" width="100%" alt="footer"/>
-
-</div>
+Happy to talk shop. Reach me on
+<a href="https://www.linkedin.com/in/kadir-sert/">LinkedIn</a>.
