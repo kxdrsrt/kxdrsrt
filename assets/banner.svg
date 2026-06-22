@@ -18,15 +18,17 @@
     </linearGradient>
     <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0.05"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="0.5" stop-color="#9FE9FF"/>
-      <stop offset="1" stop-color="#FFFFFF"/>
-      <animate attributeName="x1" values="-1;1" dur="5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0;2" dur="5s" repeatCount="indefinite"/>
+      <stop offset="0" stop-color="#C8E6F5"/>
+      <stop offset="0.5" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#C8E6F5"/>
+      <animate attributeName="x1" values="-1;1" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="8s" repeatCount="indefinite"/>
     </linearGradient>
     <clipPath id="clip"><rect x="0" y="0" width="1200" height="220" rx="20"/></clipPath>
   </defs>
@@ -78,7 +80,7 @@
     </g>
 
     <!-- moving light sweep -->
-    <rect x="-360" y="0" width="300" height="220" fill="url(#sheen)"><animate attributeName="x" values="-360;1200" dur="4.5s" repeatCount="indefinite"/></rect>
+    <rect x="-500" y="0" width="500" height="220" fill="url(#sheen)"><animate attributeName="x" values="-500;1200" dur="9s" repeatCount="indefinite"/></rect>
   </g>
 
   <!-- animated accent bar -->

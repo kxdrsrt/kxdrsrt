@@ -18,15 +18,17 @@
     </linearGradient>
     <linearGradient id="fsheen" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0.05"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="ftext" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="0.5" stop-color="#9FE9FF"/>
-      <stop offset="1" stop-color="#FFFFFF"/>
-      <animate attributeName="x1" values="-1;1" dur="5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0;2" dur="5s" repeatCount="indefinite"/>
+      <stop offset="0" stop-color="#C8E6F5"/>
+      <stop offset="0.5" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#C8E6F5"/>
+      <animate attributeName="x1" values="-1;1" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="8s" repeatCount="indefinite"/>
     </linearGradient>
     <clipPath id="fclip"><rect x="0" y="0" width="1200" height="90" rx="16"/></clipPath>
   </defs>
@@ -77,7 +79,7 @@
     <circle cx="1080" cy="30" r="4.5" fill="#0098FF"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.7s" repeatCount="indefinite"/></circle>
 
     <!-- moving light sweep -->
-    <rect x="-260" y="0" width="220" height="90" fill="url(#fsheen)"><animate attributeName="x" values="-260;1200" dur="4.5s" repeatCount="indefinite"/></rect>
+    <rect x="-400" y="0" width="400" height="90" fill="url(#fsheen)"><animate attributeName="x" values="-400;1200" dur="9s" repeatCount="indefinite"/></rect>
   </g>
 
   <rect x="0" y="0" width="8" height="90" rx="4" fill="url(#faccent)"><animate attributeName="opacity" values="0.65;1;0.65" dur="2.4s" repeatCount="indefinite"/></rect>
