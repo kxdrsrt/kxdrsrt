@@ -79,7 +79,7 @@
     <circle cx="1080" cy="30" r="4.5" fill="#0098FF"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.7s" repeatCount="indefinite"/></circle>
 
     <!-- moving light sweep -->
-    <rect x="-1000" y="0" width="1000" height="90" fill="url(#fsheen)"><animate attributeName="x" values="-1000;1200;1200" keyTimes="0;0.3;1" dur="18s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0 0 1 1"/></rect>
+    <rect x="-1000" y="0" width="1000" height="90" fill="url(#fsheen)" transform="skewX(-20)"><animate attributeName="x" values="-1000;1200;1200" keyTimes="0;0.3;1" dur="18s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0 0 1 1"/></rect>
   </g>
 
   <rect x="0" y="0" width="8" height="90" rx="4" fill="url(#faccent)"><animate attributeName="opacity" values="0.65;1;0.65" dur="2.4s" repeatCount="indefinite"/></rect>
