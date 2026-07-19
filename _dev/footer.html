@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1500px;
+      height: 160px;
+      background: #060a10;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ic {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.75;
+    }
+    .ic img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 50% 90% at 50% 50%, #060a10 0%, #060a10 20%, transparent 68%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .divider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(129,140,248,0.25) 30%, rgba(167,139,250,0.4) 50%, rgba(129,140,248,0.25) 70%, transparent 100%);
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .footer-text {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(95deg, #818cf8 0%, #a78bfa 45%, #c4b5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer-sub {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.38);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="divider"></div>
+
+  <!-- left -->
+  <div class="ic" style="top:32px; left:60px">  <img src="./icons/python.svg"     alt="Python"></div>
+  <div class="ic" style="top:18px; left:152px"> <img src="./icons/swift.svg"      alt="Swift"></div>
+  <div class="ic" style="top:74px; left:36px">  <img src="./icons/typescript.svg" alt="TypeScript"></div>
+  <div class="ic" style="top:90px; left:130px"> <img src="./icons/siemens.svg"    alt="Siemens"></div>
+  <div class="ic" style="top:26px; left:248px"> <img src="./icons/docker.svg"     alt="Docker"></div>
+
+  <!-- right -->
+  <div class="ic" style="top:32px; right:60px">  <img src="./icons/nix.svg"       alt="Nix"></div>
+  <div class="ic" style="top:18px; right:152px"> <img src="./icons/apple.svg"     alt="Apple"></div>
+  <div class="ic" style="top:74px; right:36px">  <img src="./icons/git.svg"       alt="Git"></div>
+  <div class="ic" style="top:90px; right:130px"> <img src="./icons/anthropic.svg" alt="Anthropic"></div>
+  <div class="ic" style="top:26px; right:248px"> <img src="./icons/arduino.svg"   alt="Arduino"></div>
+
+  <div class="vignette"></div>
+
+  <div class="center">
+    <div class="footer-text">Thanks for stopping by 👋</div>
+    <div class="footer-sub">Let's build something together</div>
+  </div>
+
+</body>
+</html>

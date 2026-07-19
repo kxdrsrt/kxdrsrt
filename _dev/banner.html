@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1500px;
+      height: 500px;
+      background: #060a10;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ic {
+      position: absolute;
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ic img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 55% 75% at 50% 50%, #060a10 0%, #060a10 25%, transparent 70%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      background: rgba(13, 17, 23, 0.88);
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 52px 64px;
+      display: flex;
+      align-items: center;
+      gap: 52px;
+      box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
+    }
+
+    .avatar-border {
+      flex-shrink: 0;
+      width: 168px;
+      height: 168px;
+      border-radius: 30px;
+      background: linear-gradient(140deg, #6366f1, #8b5cf6, #a78bfa);
+      padding: 3px;
+    }
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #1e1b4b;
+    }
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .text { display: flex; flex-direction: column; gap: 8px; }
+
+    .greeting {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.65);
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+
+    .name {
+      font-size: 56px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+      background: linear-gradient(95deg, #818cf8 0%, #a78bfa 45%, #c4b5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .role {
+      margin-top: 2px;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.82);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .role .dot-siemens {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #009999, #0098FF);
+      flex-shrink: 0;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      white-space: nowrap;
+    }
+    .subtitle .arrow {
+      font-size: 11px;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- top-left -->
+  <div class="ic" style="top:32px; left:52px">   <img src="./icons/python.svg"     alt="Python"></div>
+  <div class="ic" style="top:14px; left:168px">  <img src="./icons/typescript.svg" alt="TypeScript"></div>
+  <div class="ic" style="top:40px; left:286px">  <img src="./icons/swift.svg"      alt="Swift"></div>
+  <div class="ic" style="top:108px; left:36px">  <img src="./icons/nodejs.svg"     alt="Node.js"></div>
+  <div class="ic" style="top:108px; left:132px"> <img src="./icons/c.svg"          alt="C"></div>
+
+  <!-- top-right -->
+  <div class="ic" style="top:32px; right:52px">   <img src="./icons/nix.svg"       alt="Nix"></div>
+  <div class="ic" style="top:14px; right:168px">  <img src="./icons/docker.svg"    alt="Docker"></div>
+  <div class="ic" style="top:40px; right:286px">  <img src="./icons/git.svg"       alt="Git"></div>
+  <div class="ic" style="top:108px; right:36px">  <img src="./icons/anthropic.svg" alt="Anthropic"></div>
+  <div class="ic" style="top:108px; right:132px"> <img src="./icons/vscodium.svg"  alt="VS Code"></div>
+
+  <!-- mid-left -->
+  <div class="ic" style="top:204px; left:28px">  <img src="./icons/arduino.svg"   alt="Arduino"></div>
+  <div class="ic" style="top:316px; left:28px">  <img src="./icons/snowflake.svg" alt="Snowflake"></div>
+
+  <!-- mid-right -->
+  <div class="ic" style="top:204px; right:28px"> <img src="./icons/apple.svg"     alt="Apple"></div>
+  <div class="ic" style="top:316px; right:28px"> <img src="./icons/raycast.svg"   alt="Raycast"></div>
+
+  <!-- bottom-left -->
+  <div class="ic" style="bottom:34px; left:52px">   <img src="./icons/postgresql.svg" alt="SQL"></div>
+  <div class="ic" style="bottom:14px; left:168px">  <img src="./icons/homebrew.svg"   alt="Homebrew"></div>
+  <div class="ic" style="bottom:40px; left:286px">  <img src="./icons/bash.svg"       alt="Bash"></div>
+  <div class="ic" style="bottom:110px; left:36px">  <img src="./icons/copilot.svg"    alt="Copilot"></div>
+  <div class="ic" style="bottom:110px; left:132px"> <img src="./icons/siemens.svg"    alt="Siemens"></div>
+
+  <!-- bottom-right -->
+  <div class="ic" style="bottom:34px; right:52px">   <img src="./icons/github.svg"     alt="GitHub"></div>
+  <div class="ic" style="bottom:14px; right:168px">  <img src="./icons/cursor.svg"     alt="Cursor"></div>
+  <div class="ic" style="bottom:40px; right:286px">  <img src="./icons/langchain.svg"  alt="LangChain"></div>
+  <div class="ic" style="bottom:110px; right:36px">  <img src="./icons/ollama.svg"     alt="Ollama"></div>
+  <div class="ic" style="bottom:110px; right:132px"> <img src="./icons/tensorflow.svg" alt="TensorFlow"></div>
+
+  <div class="vignette"></div>
+
+  <div class="card">
+    <div class="avatar-border">
+      <div class="avatar-inner">
+        <img src="https://avatars.githubusercontent.com/u/37966558?v=4" alt="Kadir Sert">
+      </div>
+    </div>
+    <div class="text">
+      <div class="greeting">Hi there 👋, I am</div>
+      <div class="name">Kadir Sert</div>
+      <div class="role">
+        <span class="dot-siemens"></span>
+        Software Engineer at Siemens AG
+      </div>
+      <div class="subtitle">
+        <span>Medical Engineering</span>
+        <span>•</span>
+        <span>Apple &amp; iOS 🍎</span>
+        <span>•</span>
+        <span>MCP &amp; AI Tooling</span>
+        <span class="arrow">▶</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
