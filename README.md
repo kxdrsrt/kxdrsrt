@@ -1,7 +1,7 @@
 <!-- ======================= HEADER ======================= -->
 <div align="center">
 
-<img src="./assets/banner.png" width="100%" alt="Kadir Sert — Software Engineer at Siemens AG"/>
+<img src="./assets/banner.svg" width="100%" alt="Kadir Sert — Software Engineer at Siemens AG"/>
 
 <br/><br/>
 
