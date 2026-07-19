@@ -1,7 +1,7 @@
 <!-- ======================= HEADER ======================= -->
 <div align="center">
 
-<img src="./assets/banner.svg" width="100%" alt="Kadir Sert — Software Engineer at Siemens AG"/>
+<img src="./assets/banner.png" width="100%" alt="Kadir Sert — Software Engineer at Siemens AG"/>
 
 <br/><br/>
 
@@ -106,6 +106,6 @@ Happy to talk shop. Reach me on
 
 <br/>
 
-<img src="./assets/footer.svg" width="100%" alt="Thanks for stopping by"/>
+<img src="./assets/footer.png" width="100%" alt="Thanks for stopping by"/>
 
 </div>
