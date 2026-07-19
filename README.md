@@ -95,7 +95,7 @@ of just chat.
 <!-- ======================= CONTACT ======================= -->
 <h2><img src="./assets/icons/contact.svg" height="24" align="top"/>&nbsp; Contact</h2>
 
-Happy to talk shop. Reach me on
+Feel free to reach out on
 <a href="https://www.linkedin.com/in/kadir-sert/">LinkedIn</a>.
 
 <!-- ======================= FOOTER ======================= -->
