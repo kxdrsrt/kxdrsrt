@@ -103,6 +103,6 @@ Feel free to reach out on
 
 <br/>
 
-<img src="./assets/footer.png" width="100%" alt="Thanks for stopping by"/>
+<img src="./assets/footer.svg" width="100%" alt="Thanks for stopping by"/>
 
 </div>
