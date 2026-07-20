@@ -20,16 +20,21 @@
 <!-- ======================= ABOUT ======================= -->
 <h2><img src="./assets/icons/about.svg" height="24" align="top"/>&nbsp; About</h2>
 
-I am Kadir, a software engineer at Siemens AG based in Erlangen, Germany. I studied
-Mechatronics and Precision Engineering at Nuremberg University of Applied Sciences and
-finished my B.Eng. in 2024.
+I am Kadir, a software engineer based in Erlangen, Germany. I studied Mechatronics and
+Precision Engineering at Nuremberg University of Applied Sciences, graduating with a
+B.Eng. in 2024.
 
-Most of my work sits where software meets the physical world: automation, tooling, and
-the systems that tie them together. Lately a lot of that revolves around building with
-LLMs and the Model Context Protocol, giving models real access to tools and data instead
-of just chat.
+At Siemens Healthineers I work on data infrastructure - designing and maintaining
+Snowflake data warehouses, building and optimising data pipelines, managing access
+governance, and writing technical documentation for cross-team data systems.
 
-- Currently building automation and developer tooling around Claude and MCP.
+The rest of my work sits where software meets the physical world: automation, tooling,
+and the systems that connect them. Lately that increasingly means building with LLMs and
+the Model Context Protocol - giving models real access to tools and data rather than
+just chat.
+
+- Building automation and developer tooling around Claude and MCP.
+- Data engineering and Snowflake infrastructure at Siemens Healthineers.
 - Comfortable across software, embedded systems, and data work.
 - Always poking at something new to see how it ticks.
 

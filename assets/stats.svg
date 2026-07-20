@@ -1,3 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="340" height="200" viewBox="0 0 340 200"><style>* {
-          font-family: 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif
-        }</style><g class="gpsc-root"><rect x="1" y="1" rx="5" ry="5" height="99%" width="99.41176470588235%" stroke="#1a1b27" stroke-width="1" fill="#1a1b27" stroke-opacity="1"></rect><text x="30" y="40" class="gpsc-item" style="--gpsc-i: 0; font-size: 22px; fill: red;">ERROR!!!</text><g transform="translate(0,40)"><g transform="translate(30,20)"><text y="40" style="font-size: 14px; fill: red;">Cards are temporarily rate limited.</text><text y="58" style="font-size: 14px; fill: red;">Please try again in a few minutes.</text></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="165" viewBox="0 0 340 165">
+  <style>* { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; }</style>
+  <rect x="1" y="1" rx="5" ry="5" width="338" height="163" fill="#1a1b27" stroke="#1a1b27" stroke-width="1"/>
+  <!-- title -->
+  <text x="25" y="38" font-size="18" fill="#70a5fd" font-weight="600">GitHub Stats</text>
+  <!-- row 1 -->
+  <text x="25" y="75"  font-size="13" fill="#a9b1d6">Total Contributions</text>
+  <text x="200" y="75"  font-size="13" fill="#38bdae" font-weight="600">1,286</text>
+  <!-- row 2 -->
+  <text x="25" y="100" font-size="13" fill="#a9b1d6">Public Repos</text>
+  <text x="200" y="100" font-size="13" fill="#38bdae" font-weight="600">11</text>
+  <!-- row 3 -->
+  <text x="25" y="125" font-size="13" fill="#a9b1d6">Stars Earned</text>
+  <text x="200" y="125" font-size="13" fill="#38bdae" font-weight="600">5</text>
+  <!-- row 4 -->
+  <text x="25" y="150" font-size="13" fill="#a9b1d6">Followers</text>
+  <text x="200" y="150" font-size="13" fill="#38bdae" font-weight="600">8</text>
+</svg>

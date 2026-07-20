@@ -16,10 +16,18 @@ jobs:
 
       - name: Download stats SVGs
         run: |
+          # Only overwrite if response is not an error card
           curl -sf "https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kxdrsrt&theme=tokyonight" \
-            -o assets/stats.svg || echo "stats fetch failed, keeping old file"
+            -o /tmp/stats_new.svg \
+            && grep -qv 'ERROR' /tmp/stats_new.svg \
+            && cp /tmp/stats_new.svg assets/stats.svg \
+            || echo "stats: rate-limited or failed, keeping cached file"
+
           curl -sf "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kxdrsrt&theme=tokyonight" \
-            -o assets/languages.svg || echo "languages fetch failed, keeping old file"
+            -o /tmp/langs_new.svg \
+            && grep -qv 'ERROR' /tmp/langs_new.svg \
+            && cp /tmp/langs_new.svg assets/languages.svg \
+            || echo "languages: rate-limited or failed, keeping cached file"
 
       - name: Commit refreshed SVGs
         uses: stefanzweifel/git-auto-commit-action@v5
