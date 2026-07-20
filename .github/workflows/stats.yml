@@ -1,8 +1,8 @@
-name: Refresh stats cards
+name: Refresh stats card
 
 on:
   schedule:
-    - cron: "45 3 * * *"   # daily, offset from snake
+    - cron: "45 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -14,22 +14,80 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download stats SVGs
+      - name: Generate stats SVG from GitHub API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Only overwrite if response is not an error card
-          curl -sf "https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kxdrsrt&theme=tokyonight" \
-            -o /tmp/stats_new.svg \
-            && grep -qv 'ERROR' /tmp/stats_new.svg \
-            && cp /tmp/stats_new.svg assets/stats.svg \
-            || echo "stats: rate-limited or failed, keeping cached file"
+          python3 - << 'PYEOF'
+          import urllib.request, json, os, datetime
 
+          token    = os.environ["GH_TOKEN"]
+          username = "kxdrsrt"
+          hdrs     = {"Authorization": f"bearer {token}", "Content-Type": "application/json"}
+
+          def rest(path):
+              req = urllib.request.Request(f"https://api.github.com{path}", headers=hdrs)
+              return json.loads(urllib.request.urlopen(req).read())
+
+          def graphql(query):
+              req = urllib.request.Request(
+                  "https://api.github.com/graphql",
+                  data=json.dumps({"query": query}).encode(),
+                  headers=hdrs)
+              return json.loads(urllib.request.urlopen(req).read())
+
+          user  = rest(f"/users/{username}")
+          repos = rest(f"/users/{username}/repos?per_page=100")
+          stars = sum(r["stargazers_count"] for r in repos)
+
+          created_year  = int(user["created_at"][:4])
+          current_year  = datetime.date.today().year
+          total_contribs = 0
+          for year in range(created_year, current_year + 1):
+              q = f"""{{
+                user(login: "{username}") {{
+                  contributionsCollection(
+                    from: "{year}-01-01T00:00:00Z"
+                    to:   "{year}-12-31T23:59:59Z"
+                  ) {{ contributionCalendar {{ totalContributions }} }}
+                }}
+              }}"""
+              d = graphql(q)
+              total_contribs += d["data"]["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
+
+          public_repos = user["public_repos"]
+          followers    = user["followers"]
+          updated      = datetime.date.today().isoformat()
+
+          svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="340" height="165" viewBox="0 0 340 165">
+            <style>* {{ font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; }}</style>
+            <rect x="1" y="1" rx="5" ry="5" width="338" height="163" fill="#1a1b27" stroke="#30363d" stroke-width="1"/>
+            <text x="25" y="38" font-size="17" fill="#70a5fd" font-weight="600">GitHub Stats</text>
+            <text x="25"  y="72"  font-size="13" fill="#a9b1d6">Total Contributions</text>
+            <text x="230" y="72"  font-size="13" fill="#38bdae" font-weight="600">{total_contribs:,}</text>
+            <text x="25"  y="97"  font-size="13" fill="#a9b1d6">Public Repos</text>
+            <text x="230" y="97"  font-size="13" fill="#38bdae" font-weight="600">{public_repos}</text>
+            <text x="25"  y="122" font-size="13" fill="#a9b1d6">Stars Earned</text>
+            <text x="230" y="122" font-size="13" fill="#38bdae" font-weight="600">{stars}</text>
+            <text x="25"  y="147" font-size="13" fill="#a9b1d6">Followers</text>
+            <text x="230" y="147" font-size="13" fill="#38bdae" font-weight="600">{followers}</text>
+            <text x="310" y="160" font-size="9"  fill="#4a5568" text-anchor="end">updated {updated}</text>
+          </svg>"""
+
+          with open("assets/stats.svg", "w") as f:
+              f.write(svg)
+          print(f"Written: contribs={total_contribs}, repos={public_repos}, stars={stars}, followers={followers}")
+          PYEOF
+
+      - name: Also refresh languages card (only save if not rate-limited)
+        run: |
           curl -sf "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kxdrsrt&theme=tokyonight" \
             -o /tmp/langs_new.svg \
             && grep -qv 'ERROR' /tmp/langs_new.svg \
             && cp /tmp/langs_new.svg assets/languages.svg \
-            || echo "languages: rate-limited or failed, keeping cached file"
+            || echo "languages: rate-limited, keeping cached file"
 
       - name: Commit refreshed SVGs
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh stats cards"
+          commit_message: "chore: refresh stats card"
