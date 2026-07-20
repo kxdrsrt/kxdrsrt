@@ -1,0 +1,27 @@
+name: Refresh stats cards
+
+on:
+  schedule:
+    - cron: "45 3 * * *"   # daily, offset from snake
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download stats SVGs
+        run: |
+          curl -sf "https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kxdrsrt&theme=tokyonight" \
+            -o assets/stats.svg || echo "stats fetch failed, keeping old file"
+          curl -sf "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kxdrsrt&theme=tokyonight" \
+            -o assets/languages.svg || echo "languages fetch failed, keeping old file"
+
+      - name: Commit refreshed SVGs
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh stats cards"

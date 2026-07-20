@@ -78,9 +78,9 @@ of just chat.
 
 <div align="center">
 
-<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=kxdrsrt&theme=tokyonight" alt="GitHub stats"/>
 <img height="165" src="https://streak-stats.demolab.com?user=kxdrsrt&theme=tokyonight&hide_border=true" alt="GitHub streak"/>
-<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kxdrsrt&theme=tokyonight" alt="Top languages"/>
+<img height="165" src="./assets/stats.svg" alt="GitHub stats"/>
+<img height="165" src="./assets/languages.svg" alt="Top languages"/>
 
 <br/><br/>
 
