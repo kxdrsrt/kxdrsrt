@@ -79,13 +79,80 @@ jobs:
           print(f"Written: contribs={total_contribs}, repos={public_repos}, stars={stars}, followers={followers}")
           PYEOF
 
-      - name: Also refresh languages card (only save if not rate-limited)
+      - name: Generate languages SVG from GitHub API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          curl -sf "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kxdrsrt&theme=tokyonight" \
-            -o /tmp/langs_new.svg \
-            && grep -qv 'ERROR' /tmp/langs_new.svg \
-            && cp /tmp/langs_new.svg assets/languages.svg \
-            || echo "languages: rate-limited, keeping cached file"
+          python3 - << 'PYEOF'
+          import urllib.request, json, os, math
+
+          token    = os.environ["GH_TOKEN"]
+          username = "kxdrsrt"
+          hdrs     = {"Authorization": f"bearer {token}"}
+
+          def rest(path):
+              req = urllib.request.Request(f"https://api.github.com{path}", headers=hdrs)
+              return json.loads(urllib.request.urlopen(req).read())
+
+          repos = rest(f"/users/{username}/repos?per_page=100")
+          totals = {}
+          for r in repos:
+              if r["fork"]: continue
+              try:
+                  data = rest(f"/repos/{username}/{r['name']}/languages")
+                  for lang, b in data.items():
+                      totals[lang] = totals.get(lang, 0) + b
+              except: pass
+
+          sorted_langs = sorted(totals.items(), key=lambda x: -x[1])[:8]
+          grand_total  = sum(v for _, v in sorted_langs)
+          langs = [(l, round(b/grand_total*100, 1)) for l, b in sorted_langs]
+
+          COLORS = {
+              "Swift":"#F05138","Shell":"#89e051","Nix":"#7e7eff",
+              "TypeScript":"#3178c6","HTML":"#e34c26","Makefile":"#427819",
+              "Python":"#3572A5","JavaScript":"#f1e05a","C":"#555555",
+          }
+
+          W, H = 340, 165
+          cx, cy, r_out, r_in = 268, 83, 58, 34
+          angle = -90
+          slices_svg = []
+          for lang, pct in langs:
+              sweep = pct / 100 * 360
+              color = COLORS.get(lang, "#888888")
+              s, e = math.radians(angle), math.radians(angle + sweep)
+              ox1, oy1 = cx+r_out*math.cos(s), cy+r_out*math.sin(s)
+              ox2, oy2 = cx+r_out*math.cos(e), cy+r_out*math.sin(e)
+              ix1, iy1 = cx+r_in*math.cos(s),  cy+r_in*math.sin(s)
+              ix2, iy2 = cx+r_in*math.cos(e),  cy+r_in*math.sin(e)
+              lg = 1 if sweep > 180 else 0
+              d = (f"M {ox1:.1f},{oy1:.1f} A {r_out},{r_out} 0 {lg},1 {ox2:.1f},{oy2:.1f} "
+                   f"L {ix2:.1f},{iy2:.1f} A {r_in},{r_in} 0 {lg},0 {ix1:.1f},{iy1:.1f} Z")
+              slices_svg.append(f'<path d="{d}" fill="{color}"/>')
+              angle += sweep
+
+          rows = []
+          for i, (lang, pct) in enumerate(langs[:6]):
+              c = COLORS.get(lang, "#888888")
+              yb = 20 + i * 24
+              rows += [
+                  f'<rect x="14" y="{yb}" width="11" height="11" rx="2" fill="{c}"/>',
+                  f'<text x="30" y="{yb+9}" font-size="12" fill="#a9b1d6">{lang}</text>',
+                  f'<text x="172" y="{yb+9}" font-size="12" fill="#38bdae" font-weight="600">{pct}%</text>',
+              ]
+
+          parts = [
+              f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
+              "<style>* { font-family: 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; }</style>",
+              f'<rect x="1" y="1" rx="5" ry="5" width="338" height="163" fill="#1a1b27" stroke="#30363d" stroke-width="1"/>',
+              f'<text x="14" y="14" font-size="15" fill="#70a5fd" font-weight="600">Top Languages</text>',
+          ] + rows + slices_svg + ["</svg>"]
+
+          with open("assets/languages.svg", "w") as f:
+              f.write("\n".join(parts))
+          print(f"Written languages.svg: {[f'{l} {p}%' for l,p in langs[:5]]}")
+          PYEOF
 
       - name: Commit refreshed SVGs
         uses: stefanzweifel/git-auto-commit-action@v5
