@@ -149,7 +149,7 @@ jobs:
               f'<text x="14" y="14" font-size="15" fill="#70a5fd" font-weight="600">Top Languages</text>',
           ] + rows + slices_svg + ["</svg>"]
 
-          with open("assets/languages.svg", "w") as f:
+          with open("assets/top-languages.svg", "w") as f:
               f.write("\n".join(parts))
           print(f"Written languages.svg: {[f'{l} {p}%' for l,p in langs[:5]]}")
           PYEOF
