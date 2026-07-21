@@ -87,7 +87,7 @@ just chat.
 
 <div align="center">
 
-<img height="165" src="https://streak-stats.demolab.com?user=kxdrsrt&theme=tokyonight&hide_border=true" alt="GitHub streak"/>
+<img height="165" src="./assets/streak.svg" alt="GitHub streak"/>
 <img height="165" src="./assets/stats.svg" alt="GitHub stats"/>
 <img height="165" src="./assets/top-languages.svg" alt="Top languages"/>
 
