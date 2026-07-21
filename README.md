@@ -69,7 +69,7 @@ just chat.
 ![AutoHotkey](https://img.shields.io/badge/AutoHotkey-334455?style=for-the-badge&logo=autohotkey&logoColor=white)
 <br/>
 ![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)
-![Azure DevOps](https://img.shields.io/badge/Azure%20DevOps-0078D4?style=for-the-badge&logo=azuredevops&logoColor=white)
+![Azure DevOps](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QXp1cmUgRGV2T3BzPC90aXRsZT48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTAgOC44NzdMMi4yNDcgNS45MWw4LjQwNS0zLjQxNlYuMDIybDcuMzcgNS4zOTNMMi45NjYgOC4zMzh2OC4yMjVMMCAxNS43MDd6bTI0LTQuNDV2MTQuNjUxbC01Ljc1MyA0LjktOS4zMDMtMy4wNTd2My4wNTZsLTUuOTc4LTcuNDE2IDE1LjA1NyAxLjc5OFY1LjQxNXoiLz48L3N2Zz4=&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTkwLjIgNC40bC0yNSAxNEw0MC41IDM2LjEgMTUuOCAxOC43bC04LjQgNS4ydjUyLjJsOC40IDUuMkw0MC41IDYzLjkgNjUuMiA4MS42bDI1IDE0IDQuOC0yLjdWNy4xbC00LjgtMi43ek03Mi40IDcxLjJMNDcuOCA1NS42VjQ0LjRsNDQuNi0yNS45djUxbC0yMCAxLjd6Ii8+PC9zdmc+&logoColor=white)
